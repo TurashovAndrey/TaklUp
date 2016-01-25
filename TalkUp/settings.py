@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     #'django.contrib.admin',
     'app',
     'rest_framework',
+    # 'jquery',
+    # 'bootstrap',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -63,6 +65,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'talkup': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'talkup',
+        'USER': 'postgres',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
